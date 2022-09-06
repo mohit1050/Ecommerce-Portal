@@ -1,0 +1,33 @@
+<p>list-products works!</p>
+<!-- <ul class="list-group">
+    <div *ngFor="let p of products | keyvalue; let i = index">
+        <div *ngFor="let x of p.key">
+            <li class="list-group-item">
+
+                {{ p.value }} <br />
+                {{ x.description }} <br />
+            {{ x.rating }} <br />
+            {{ x.price }} <br />
+
+            </li>
+        </div>
+    </div>
+</ul> -->
+
+<ul class="list-group">
+    <div *ngFor="let p of products | json; let i = index">
+        <div *ngFor="let x of p| keyvalue; let i2 = index">
+            <li class="list-group-item">
+
+                {{ i2 }} <br />
+                {{x}}
+                <!-- {{ x.description }} <br />
+                {{ x.rating }} <br />
+                {{ x.price }} <br /> -->
+
+            </li>
+        </div>
+    </div>
+</ul>
+
+{{products | json}}
