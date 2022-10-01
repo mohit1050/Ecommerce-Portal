@@ -78,7 +78,6 @@ export class SignupComponent implements OnInit {
       .pipe(
         this.toast.observe({
           success: 'Congrats! You are all signed up',
-          loading: 'Signing up...',
           error: ({ message }) => `${message}`,
         })
       )
